@@ -30,8 +30,8 @@ function myFunction() {
 
 function myFunction2() {
     clearInterval(myInterval);
-    stop.disabled = true;
     start.disabled = false;
+    stop.disabled = true;
 }
 
 start.addEventListener("click" , myFunction);
