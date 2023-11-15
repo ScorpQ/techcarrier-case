@@ -1,6 +1,10 @@
 const ms = document.getElementById("ms");
 const second = document.getElementById("second");
 const minute = document.getElementById("minute");
+const start = document.getElementById("start");
+
+console.log(start)
+
 ms.innerHTML = 0;
 second.innerHTML = 0;
 minute.innerHTML = 0;
@@ -17,4 +21,9 @@ const setMs = () => {
     }
 }
 
-setInterval(setMs , 14);
+function myFunction() {
+    setInterval(setMs , 14);
+    start.disabled = true;
+}
+
+start.addEventListener("click" , myFunction);
