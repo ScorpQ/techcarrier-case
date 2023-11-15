@@ -9,7 +9,14 @@ body{
     align-items: center;
     height: 90vh;
 }
+
+.container{
+    background-color: rgb(3, 22, 15);
+    border-radius: 4rem;
+    padding: 1rem;
+}
 .container p{
     font-size: 5rem;
+    color:blue;
     display: inline;
 }

@@ -2,12 +2,13 @@ const ms = document.getElementById("ms");
 const second = document.getElementById("second");
 const minute = document.getElementById("minute");
 const start = document.getElementById("start");
-
-console.log(start)
+const stop = document.getElementById("stop");
 
 ms.innerHTML = 0;
 second.innerHTML = 0;
 minute.innerHTML = 0;
+let myInterval = "";
+
 
 const setMs = () => {
     ms.innerHTML =  Number(ms.innerHTML) + 1;
@@ -22,8 +23,16 @@ const setMs = () => {
 }
 
 function myFunction() {
-    setInterval(setMs , 14);
+    myInterval = setInterval(setMs , 14);
     start.disabled = true;
+    stop.disabled = false;
+}
+
+function myFunction2() {
+    clearInterval(myInterval);
+    stop.disabled = true;
+    start.disabled = false;
 }
 
 start.addEventListener("click" , myFunction);
+stop.addEventListener("click" , myFunction2)
