@@ -1,3 +1,15 @@
-.container{
- display: flex;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container p{
+    font-size: 5rem;
+    display: inline;
 }

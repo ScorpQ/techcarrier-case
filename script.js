@@ -1,15 +1,9 @@
 const ms = document.getElementById("ms");
 const second = document.getElementById("second");
+const minute = document.getElementById("minute");
 ms.innerHTML = 0;
 second.innerHTML = 0;
-
-
-
-
-const setSecond = () => {
-    second.innerHTML =  Number(second.innerHTML) + 1;
-}
-
+minute.innerHTML = 0;
 
 const setMs = () => {
     ms.innerHTML =  Number(ms.innerHTML) + 1;
@@ -17,8 +11,10 @@ const setMs = () => {
         second.innerHTML =  Number(second.innerHTML) + 1;
         ms.innerHTML = 0;
     }
-
+    if(second.innerHTML == 60){
+        minute.innerHTML =  Number(minute.innerHTML) + 1;
+        second.innerHTML = 0;
+    }
 }
-
 
 setInterval(setMs , 14);
